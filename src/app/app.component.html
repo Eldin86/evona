@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let post of posts">{{post.FullImageUrl}}</li>
+</ul>
+
+
+<ngx-slick-carousel class="carousel" 
+[config]="slideConfig">
+<div ngxSlickItem *ngFor="let post of posts" class="slide">
+<img src="{{ post.FullImageUrl }}" alt="" style="max-width: 100%; height: auto" >
+</div>
+<!-- width="100%" -->
+</ngx-slick-carousel>
+
